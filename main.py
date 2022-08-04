@@ -77,7 +77,7 @@ def scrape(start_url, depth):
         unvisited_urls, next_images = iterate_urls(visited_urls, unvisited_urls, i)
         response.extend(next_images)
     with open("./image_results.json", "w") as file:
-        json.dump([img.__dict__() for img in response], file)
+        json.dump({"results": [img.__dict__() for img in response]}, file)
 
     # Prove no duplicate images are returned
     # print(len(set(response)))

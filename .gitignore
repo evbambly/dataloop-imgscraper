@@ -1,5 +1,6 @@
 # Environments
 venv/
+.idea
 
 # Products
 image_results.json
